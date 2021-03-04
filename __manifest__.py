@@ -9,6 +9,8 @@
     'license': '',
     'depends': ['base'],
     'data': [
+        'security/groups.xml',
+        'security/ir.model.access.csv',
         'views/store_product.xml'
     ],
     'installable': True
