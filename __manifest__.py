@@ -7,7 +7,9 @@
     'author': 'Alberto',
     'website': '',
     'license': '',
-    'depends': [],
-    'data': [],
+    'depends': ['base'],
+    'data': [
+        'views/store_product.xml'
+    ],
     'installable': True
 }
