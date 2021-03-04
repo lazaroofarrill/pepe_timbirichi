@@ -23,11 +23,20 @@
                         <field name="date_release"/>
                     </group>
                     <group>
-                        <field name="seller_ids" widget="many2many_tags"/>
+                        <field name="seller_id" widget="many2one"/>
+                        <field name="manufacturer_id" widget="many2one"/>
+
+                        <field name="state" widget="selection"/>
+
+                        <button name="make_in_stock" string="Make In Stock" type="object"/>
+                        <button name="make_out_of_stock" string="Make Out Of Stock" type="object"/>
+                        <button name="make_discontinued" string="Make Discontinued" type="object"/>
                     </group>
                     <group>
                         <field name="description"/>
-                        <field name="product_image"/>
+                    </group>
+                    <group>
+                        <field name="product_image" widget="image" class="oe_avatar"/>
                     </group>
                 </group>
             </form>
@@ -40,7 +49,10 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
+                <field name="retail_price"/>
+                <field name="currency_id"/>
                 <field name="date_release"/>
+                <field name="state" widget="selection_badge"/>
             </tree>
         </field>
     </record>
@@ -51,8 +63,8 @@
         <field name="arch" type="xml">
         <search>
             <field name="name"/>
-            <field name="seller_ids"/>
-            <filter string="No Sellers" name="without_seller" domain="[('seller_ids','=',False)]"/>
+            <field name="seller_id"/>
+            <filter string="No Sellers" name="without_seller" domain="[('seller_id','=',False)]"/>
         </search>
         </field>
     </record>
