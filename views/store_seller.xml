@@ -13,19 +13,20 @@
             <field name="name">Store Seller Form</field>
             <field name="model">store.seller</field>
             <field name="arch" type="xml">
-                <sheet>
-                    <group>
+                <form>
+                    <sheet>
                         <group>
-                            <field name="name"/>
-                            <field name="website" widget="url"/>
-                            <field name="contact_address"/>
+                            <group>
+                                <field name="name"/>
+                                <field name="website" widget="url"/>
+                            </group>
+                            <group>
+                                <field name="product_ids"/>
+                                <field name="image" widget="image"/>
+                            </group>
                         </group>
-                        <group>
-                            <field name="product_ids"/>
-                            <field name="image_256" widget="image"/>
-                        </group>
-                    </group>
-                </sheet>
+                    </sheet>
+                </form>
             </field>
         </record>
 
