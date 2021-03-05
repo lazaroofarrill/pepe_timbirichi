@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="store_seller_act_window" model="ir.actions.act_window">
+            <field name="name">Store Sellers</field>
+            <field name="res_model">store.seller</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Sellers" id="store_seller_menu" parent="store_base_menu" action="store_seller_act_window"/>
+
+        <record id="store_seller_form_view" model="ir.ui.view">
+            <field name="name">Store Seller Form</field>
+            <field name="model">store.seller</field>
+            <field name="arch" type="xml">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="website" widget="url"/>
+                            <field name="contact_address"/>
+                        </group>
+                        <group>
+                            <field name="product_ids"/>
+                            <field name="image_256" widget="image"/>
+                        </group>
+                    </group>
+                </sheet>
+            </field>
+        </record>
+
+        <record id="store_seller_tree_view" model="ir.ui.view">
+            <field name="name">Store Seller Tree</field>
+            <field name="model">store.seller</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="website" widget="url"/>
+                    <field name="product_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="store_seller_search_view" model="ir.ui.view">
+            <field name="name">Store Seller Search</field>
+            <field name="model">store.seller</field>
+            <field name="arch" type="xml">
+                <search string="ModelTitle">
+                    <field name="name"/>
+                    <field name="product_ids"/>
+                    <filter string="No Products" name="without_products" domain="[('product_ids','=',False)]"/>
+                </search>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>
