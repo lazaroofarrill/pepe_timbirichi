@@ -1,5 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 acl_product,store.product default,model_store_product,,1,0,0,0
 acl_product_store_employee,store.product_store_employee,model_store_product,group_store_employee,1,1,1,1
-acl_department_store_employee,store.department_store_employee,model_store_department,group_store_employee,1,1,1,1
+acl_product_department_store_employee,store.product.department_store_employee,model_store_product_department,group_store_employee,1,1,1,1
 acl_seller_store_employee,store.seller_store_employee,model_store_seller,group_store_employee,1,1,1,1

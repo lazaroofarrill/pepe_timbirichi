@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="store_department_act_window" model="ir.actions.act_window">
+    <record id="store_product_department_act_window" model="ir.actions.act_window">
         <field name="name">Store Department Form</field>
-        <field name="res_model">store.department</field>
+        <field name="res_model">store.product.department</field>
         <field name="view_mode">tree,form</field>
     </record>
 
 <!--    <menuitem name="Pepe's Timbirichi" id="store_base_menu"/>-->
-    <menuitem name="Departments" id="store_department_menu" parent="store_base_menu" action="store_department_act_window"/>
+    <menuitem name="Departments" id="store_product_department_menu" parent="store_base_menu" action="store_product_department_act_window"/>
 
-    <record id="store_department_form_view" model="ir.ui.view">
+    <record id="store_product_department_form_view" model="ir.ui.view">
         <field name="name">Store Department Form</field>
-        <field name="model">store.department</field>
+        <field name="model">store.product.department</field>
         <field name="arch" type="xml">
             <form>
                 <group>
@@ -28,9 +28,9 @@
         </field>
     </record>
 
-    <record id="store_department_tree_view" model="ir.ui.view">
+    <record id="store_product_department_tree_view" model="ir.ui.view">
         <field name="name">Store Department Form</field>
-        <field name="model">store.department</field>
+        <field name="model">store.product.department</field>
         <field name="arch" type="xml">
             <tree string="ModelTitle">
                 <field name="name"/>
@@ -40,9 +40,9 @@
         </field>
     </record>
 
-    <record id="store_department_search_view" model="ir.ui.view">
+    <record id="store_product_department_search_view" model="ir.ui.view">
         <field name="name">Store Department Form</field>
-        <field name="model">store.department</field>
+        <field name="model">store.product.department</field>
         <field name="arch" type="xml">
             <search>
             <field name="name"/>

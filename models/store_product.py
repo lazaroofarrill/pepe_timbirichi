@@ -1,4 +1,4 @@
-from odoo import fields, models, api
+from odoo import fields, models
 from odoo.exceptions import UserError
 from odoo.tools.translate import _
 
@@ -28,7 +28,7 @@ class StoreProduct(models.Model):
     date_release = fields.Date("Release date")
     product_image = fields.Binary("Image")
     description = fields.Html("Description")
-    department_id = fields.Many2one("store.department", string="Department")
+    department_id = fields.Many2one("store.product.department", string="Department")
 
     currency_id = fields.Many2one("res.currency", string="Currency")
     retail_price = fields.Monetary("Price", currency_field="currency_id", required=True)
