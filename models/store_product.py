@@ -41,8 +41,8 @@ class StoreProduct(models.Model):
     ], default="incoming")
 
     # department = fields.Many2one("")
-    seller_id = fields.Many2one("res.company", string="Seller")
-    manufacturer_id = fields.Many2one("res.company", string="Manufacturer")
+    seller_id = fields.Many2one("store.seller", string="Seller")
+    # manufacturer_id = fields.Many2one("res.company", string="Manufacturer")
 
     # product.state related methods
 
