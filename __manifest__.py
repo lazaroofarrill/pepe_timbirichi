@@ -11,6 +11,7 @@
     'data': [
         'security/groups.xml',
         'security/ir.model.access.csv',
+        'views/templates.xml',
         'views/store_product.xml',
         'views/store_product_department.xml',
         'views/store_seller.xml'
