@@ -14,7 +14,9 @@
         'views/templates.xml',
         'views/store_product.xml',
         'views/store_product_department.xml',
-        'views/store_seller.xml'
+        'views/store_seller.xml',
+        'reports/store_report_menu.xml',
+        'reports/store_report_product.xml'
     ],
     'installable': True
 }
